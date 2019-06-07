@@ -1,0 +1,132 @@
+	- ls -al (archivos en directorio)
+- git init   (crea una carpeta .git)
+- git status (checkear status de archivos)
+- git add .  (preparar TODO para commit)
+	-git add archivo (agrega un archivo)
+	-git add *.png (agrega todos los .png del proyecto)
+	-git add "*.png" (agrega todos los png del directorio)
+	-git add css/ (agrega todo el contenido de la carpeta css)
+	-git reset *.xml (remueve del stage, en este caso 
+				todos los archivos xml)
+	-git add --all (agrega todos los archivos)
+	-git add carpeta/*.pdf (agrega todos los .pdf dentro de la carpeta)
+
+- git commit -m "titulo" (crea un archivo historico)
+   ----> git status (on branch master)
+- git -- .    (reconstruye el proyecto al ultimo commit)
+
+- git log (informacion de commits)
+	-HEAD ultimo commit en la rama actual.
+	-git log --oneline --decorate --all --graph
+
+-git status -s (menos info)
+
+	-Shortcuts-
+git config --global alias.lg "log --oneline --decorate --all --graph"
+git config --global -e (modificaciones de shortcuts)
+git config --global -l (sin escritura)
+
+git diff (mostrar cambios entre commit anterior y actualidad)
+git diff --staged
+git reset HEAD readme.md (remueve del stage el archivo readme.md)
+	- HEAD apunta al ultimo commit realizado.
+	- HEAD^ apunta al anterior.
+git checkout -- readme.md (vuelve al commit anterior de ese archivo)
+git commit --amend -m "mensaje cambiado" (cambiar mensaje)
+git commit -am (agregar todo y agregar mensaje)
+
+git reflog (historial de commits o modificaciones para volver en el tiempo)
+	- usar git reset --hard + codigo para volver a cualquier punto
+
+git rm readme.md (borrar el archivo y lo manda al stage)
+	- luego para confirmar hay que hacer un git commit (ej. "readme borrado")
+git mv destruir-mundo.txt salvar-mundo.txt (cambia el nombre y lo mueve)
+	- en este caso no lo estamos moviendo
+	- luego hay que realizar el commit con el cambio registrado
+git add -u (actualizar al borrar desde editor de vsc)
+
+.gitignore (crear archivo con ese nombre para agregar dentro todo 
+		lo que se desea ignorar)
+
+git branch rama-villanos
+git checkout rama-villanos (para moverse a la rama)
+git diff rama-villanos master (ver las diferencias entre rama-v y master)
+git checkout master (vuelve al master)
+git merge rama-villanos (el merge se debe hacer desde el master)
+git branch -d rama-villanos (el -d, delete, borra la rama-villanos)
+		-Esto se le llama fastfoward-
+
+git tag nombre (crear tag)
+git tag -d nombre (borrar tag)
+git tag -a v1.0.0 -m "version 1.0.0" (crear tag con info)
+git show v1.0.0 ( muestra data del tag )
+
+
+------------------stash-----------------
+-git stash (crea un stash)
+-git stash pop (extrae los ultimos elementos del stash,
+		lo vuelve a colocar en stage y lo borra
+		del stash)
+-git stash list (muestra la lista de stash)
+	-git stash list --stat (mas info de los stash)
+	-git show stash (mas info todavia)
+	-git show stash nombre.entradaStash
+
+-git stash drop (elimina el ultimo registro del stash)
+-git stash clear (borra todos los stash)
+
+ 
+--------------rebase----------------------
+git branch (checkear ramas)
+git checkout nombre.rama (mover a la rama)
+git rebase master (mueve la rama al head)
+git checkout master (vuelve al master)
+git merge nombre.rama (ejecuta el merge)
+
+git rebase -i HEAD~1 (rebase interactivo, 1)
+	squash (unir commits)
+	reword (cambiar el nombre del commit usando rebase)
+
+
+-----------------------Remote----------------------------------------
+push (subir el repositorio al repositorio remoto)
+pull (descargar los cambios)
+
+git remote add origin direccionWeb (agregar repo remoto)
+	-origin es un nombre estandar para referirse
+	 al origen. nada mas.
+git remote -v (revisar repo remotos agregados)
+
+
+----------------------GIT HUB------------
+repo github creado - udemy-heroes
+
+git remote add origin https://github.com/zeibox/udemy-heroes.git
+
+git remote add upstream "direccion web del rep. central que maneja los pull req"
+-De esta forma obtenemos los cambios y podemos hacer un push hacia nuestro
+repositorio local.
+
+git checkout -b rama-villanos (Crear nueva rama)
+
+git branch -a (para ver todas las ramas, incluyendo las remotas)
+
+git push origin :rama-villanos (borra desde la consola, la rama en
+				github)
+git remote prune origin (limpia las ramas de github, si es que no pudimos
+			borrarla desde la consola)
+
+---Cada vez que se hace un push a PRODUCCION hay que crear un TAG---
+
+git tag -a v.0.0.1 0123123(hash del commit) -m "version alfa" (crea tag)
+git tag -a v.0.1.1 0123455 (sin -m abre el editor de texto para un mensaje
+				mas detallado)
+git push --tags (hace un push de los tags, no funciona solo git push)
+git push origin rama- (hace un push de la rama para pool request)
+
+
+
+
+
+
+
