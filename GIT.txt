@@ -1,3 +1,5 @@
+Git + GitHub
+
 	- ls -al (archivos en directorio)
 - git init   (crea una carpeta .git)
 - git status (checkear status de archivos)
