@@ -123,7 +123,7 @@ git tag -a v.0.1.1 0123455 (sin -m abre el editor de texto para un mensaje
 				mas detallado)
 git push --tags (hace un push de los tags, no funciona solo git push)
 git push origin rama- (hace un push de la rama para pool request)
-
+git branch -D rama- (borrar rama)
 
 
 
