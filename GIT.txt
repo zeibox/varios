@@ -62,7 +62,7 @@ git tag -a v1.0.0 -m "version 1.0.0" (crear tag con info)
 git show v1.0.0 ( muestra data del tag )
 
 
-------------------stash-----------------
+------------------stash----------------- ¿para que sirve y cuando se usa el stash?
 -git stash (crea un stash)
 -git stash pop (extrae los ultimos elementos del stash,
 		lo vuelve a colocar en stage y lo borra
@@ -76,7 +76,7 @@ git show v1.0.0 ( muestra data del tag )
 -git stash clear (borra todos los stash)
 
  
---------------rebase----------------------
+--------------rebase----------------------  ¿para que sirve y cuando se usa el rebase?
 git branch (checkear ramas)
 git checkout nombre.rama (mover a la rama)
 git rebase master (mueve la rama al head)
@@ -124,6 +124,24 @@ git tag -a v.0.1.1 0123455 (sin -m abre el editor de texto para un mensaje
 git push --tags (hace un push de los tags, no funciona solo git push)
 git push origin rama- (hace un push de la rama para pool request)
 
+-----Crear un repositorio local + github-----
+Git init (crear git en la carpeta a trabajar).
+Ingresar comando que te da github al crear el repositorio.
+Una vez creado, abrir proyecto en VSC.
+-Crear una rama-usuario.nombre (ej. git checkout -b rama-leandro)
+-Crear un archivo prueba.md o prueba.txt
+-Agregar al stage y hacer commit del archivo. (git add . / git commit -m "creamos prueba.md")
+-Mandar pull request (git push origin rama-leandro)
+-Ir a github, para crear/aceptar el pullrequest
+-Hacer el merge
+-Volver a la consola y moverse al Master (git checkout master)
+-Borrar la rama-leandro (se van a borrar los cambios al moverse al Master, con el comando anterior)
+	(se debe borrar la rama una vez se haya hecho el merge desde github)
+	git branch -D rama-leandro.
+-Por ultimo hacer un git pull para descargar los cambios que fueron aceptados.
+---------------------------------
+Tambien se puede hacer un push directo. Pero no queda registro de la rama que hace el push.
+Porque solo se puede hacer push desde el Master.
 
 
 
