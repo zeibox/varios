@@ -160,7 +160,7 @@ Porque solo se puede hacer push desde el Master.
 -Volver a VSC y hacer un checkout master (Moverse a la rama master).
 -Los cambios no aparecen aca, estan ya subidos a github.
 -Hacer un git branch -D rama-usuario ----- IMPORTANTE ----- (Solo borrar la rama una vez se haya hecho el merge en github).
--Hacer un git pull origin master (Descargar la modificacion subida anteriormente desde la rama, ahora al master)
+-Hacer un git push origin master (Descargar la modificacion subida anteriormente desde la rama, ahora al master)
 -Hacer un git lg o git log para ver las modificaciones.
 
 
