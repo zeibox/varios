@@ -128,7 +128,11 @@ git branch -D rama- (borrar rama)
 ## Crear un repositorio local + github- desde zeibox.
 Git init (crear git en la carpeta a trabajar).
 Ingresar comando que te da github al crear el repositorio.
-Una vez creado, abrir proyecto en VSC.
+git add .
+git commit -m "primer commit"
+git push -u origin master
+
+---empezar a trabajar en el repositorio----
 -Crear una rama-usuario.nombre (ej. git checkout -b rama-leandro)
 -Crear un archivo prueba.md o prueba.txt
 -Agregar al stage y hacer commit del archivo. (git add . / git commit -m "creamos prueba.md")
@@ -140,6 +144,7 @@ Una vez creado, abrir proyecto en VSC.
 	(se debe borrar la rama una vez se haya hecho el merge desde github)
 	git branch -D rama-leandro.
 -Por ultimo hacer un git pull para descargar los cambios que fueron aceptados.
+
 #### ---------------------------------
 Tambien se puede hacer un push directo. Pero no queda registro de la rama que hace el push.
 Porque solo se puede hacer push desde el Master.
