@@ -125,7 +125,7 @@ git push --tags (hace un push de los tags, no funciona solo git push)
 git push origin rama- (hace un push de la rama para pool request)
 git branch -D rama- (borrar rama)
 
------Crear un repositorio local + github----- desde zeibox.
+** -----Crear un repositorio local + github----- desde zeibox.
 Git init (crear git en la carpeta a trabajar).
 Ingresar comando que te da github al crear el repositorio.
 Una vez creado, abrir proyecto en VSC.
