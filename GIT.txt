@@ -125,7 +125,7 @@ git push --tags (hace un push de los tags, no funciona solo git push)
 git push origin rama- (hace un push de la rama para pool request)
 git branch -D rama- (borrar rama)
 
-## Crear un repositorio local + github- desde zeibox.
+##Crear un repositorio local + github- desde zeibox.
 Git init (crear git en la carpeta a trabajar).
 Ingresar comando que te da github al crear el repositorio.
 Una vez creado, abrir proyecto en VSC.
@@ -140,11 +140,11 @@ Una vez creado, abrir proyecto en VSC.
 	(se debe borrar la rama una vez se haya hecho el merge desde github)
 	git branch -D rama-leandro.
 -Por ultimo hacer un git pull para descargar los cambios que fueron aceptados.
-#### ---------------------------------
+####---------------------------------
 Tambien se puede hacer un push directo. Pero no queda registro de la rama que hace el push.
 Porque solo se puede hacer push desde el Master.
 
-## Empezar a trabajar como colaborador
+##Empezar a trabajar como colaborador
 -Crear carpeta donde va a ir el proyecto.
 -Hacer git init.
 -Hacer git remote add origin "direccion web del repositorio". (Agregamos el repositorio remoto a la carpeta)
